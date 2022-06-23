@@ -54,10 +54,7 @@ textarea {
   margin: 0 auto;
   height: 100%;
 }
-.overlay--show {
-  visibility: visible;
-  opacity: 1;
-}
+
 .burger {
   display: none;
 }
@@ -1483,7 +1480,11 @@ textarea {
     background: rgba(0, 0, 0, 0.349);
     visibility: hidden;
     opacity: 0;
-    transform: all 0.3s;
+    transition: all 0.3s;
+  }
+  .overlay--show {
+    visibility: visible;
+    opacity: 1;
   }
   .burger {
     position: fixed;
@@ -1511,6 +1512,7 @@ textarea {
     background-color: #424551;
     border-radius: 3px;
     margin: 4px 0;
+    transform: scale(1);
   }
   .burger::before,
   .burger::after {
@@ -1521,46 +1523,17 @@ textarea {
     background-color: #424551;
     border-radius: 3px;
   }
-  /* бургер хрестик */
-  /* .burger--cross span {
-    display: block;
-    width: 30px;
-    height: 4px;
-    background-color: #424551;
-    border-radius: 3px;
-    margin: 4px 0;
-    transform: rotate(45deg);
+  .burger._active::after {
+    display: none;
   }
-  .burger::before--cross {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 4px;
-    background-color: #424551;
-    border-radius: 3px;
+  .burger._active span {
+    transform: rotate(45deg);
+    position: absolute;
+  }
+  .burger._active::before {
     transform: rotate(-45deg);
     position: absolute;
-  } */
-  /* /бургер хрестик */
-  /* ------------------------ */
-  /* .program__acc-head::before,
-  .program__acc-head::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -40px;
-    width: 18px;
-    height: 2px;
-    background-color: #ff3f3a;
-    border-radius: 4px;
-  } */
-  /* .program__acc-head::after {
-    transform: rotate(90deg);
-    transform: all 0.3s;
-  } */
-  /* .program__acc-link--active .program__acc-head::after {
-    transform: rotate(0deg);
-  } */
+  }
   /* ------------------------ */
   .header {
     padding-top: 92px;
@@ -1720,6 +1693,9 @@ textarea {
   }
   .blog__image-box img {
     width: auto;
+  }
+  .blog__info-date {
+    margin: 5px 0px 20px 0px;
   }
   /* ------------------------------------------ */
   .info__inner {
