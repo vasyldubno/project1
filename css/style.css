@@ -84,6 +84,9 @@ textarea {
   background-repeat: no-repeat;
   background-clip: border-box;
 }
+.heading-text--center {
+  text-align: center;
+}
 .button--empty span {
   background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
   -webkit-background-clip: text;
@@ -320,7 +323,7 @@ textarea {
   height: 85px;
 }
 /* ==================================================== */
-.directions {
+/* .directions {
   padding-bottom: 180px;
 }
 .directions__inner {
@@ -466,10 +469,10 @@ textarea {
 }
 .directions__list-item--development .directions__link-tag {
   background-color: #7772f1;
-}
-.heading-text--center {
+} */
+/* .heading-text--center {
   text-align: center;
-}
+}  */
 /* ============================ CERT ============================ */
 .main__cert {
   margin-bottom: -46px;
@@ -1434,7 +1437,6 @@ textarea {
 }
 
 /* ============================ MEDIA ============================ */
-/* ============================ MEDIA ============================ */
 
 /* ============================ 1200 ============================ */
 @media (max-width: 1200px) {
@@ -1591,6 +1593,7 @@ textarea {
   .about__img {
     max-width: 400px;
   }
+  /* ------------------------------------------ */
   .cert__inner {
     flex-direction: column;
     align-items: center;
@@ -1608,6 +1611,7 @@ textarea {
   .companies__grid {
     gap: 40px 5%;
   }
+  /* ------------------------------------------ */
   .program__image {
     max-width: 400px;
     flex-shrink: 0;
@@ -1657,16 +1661,6 @@ textarea {
   /* ------------------------------------------ */
   .about__img {
     display: none;
-  }
-  /* ------------------------------------------ */
-  .directions__filter-item {
-    margin-right: 10px;
-  }
-  .directions__list {
-    gap: 30px 10px;
-  }
-  .directions__list-content {
-    padding: 24px 5px 5px 5px;
   }
   /* ------------------------------------------ */
   .companies__grid {
@@ -1735,10 +1729,6 @@ textarea {
     align-self: start;
   }
   /* ------------------------------------------ */
-  .directions__list {
-    grid-template: repeat(3, auto) / repeat(2, 1fr);
-  }
-  /* ------------------------------------------ */
   .testimonials__slider-wrapper {
     padding: 0;
   }
@@ -1775,13 +1765,6 @@ textarea {
   }
   .about__btn {
     margin: 0px 0px 30px 0px;
-  }
-  /* ------------------------------------------ */
-  .directions__list {
-    grid-template: none;
-  }
-  .directions__list-item--empty {
-    display: none;
   }
   /* ------------------------------------------ */
   .team__slider-arrows {
@@ -1894,10 +1877,6 @@ textarea {
   .header__content-btn {
     margin: 0px 0px 30px 0px;
     text-align: center;
-  }
-  /* ------------------------------------------ */
-  .directions__filter-box {
-    margin-bottom: 15px;
   }
   /* ------------------------------------------ */
   .cert__logos {
